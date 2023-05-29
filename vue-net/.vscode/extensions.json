@@ -11,6 +11,7 @@
     "formulahendry.auto-complete-tag",
     "lokalise.i18n-ally",
     "ms-azuretools.vscode-docker",
-    "ms-playwright.playwright"
+    "ms-playwright.playwright",
+    "redhat.vscode-xml"
   ]
 }
