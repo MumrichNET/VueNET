@@ -1,8 +1,15 @@
-import { defineConfig } from "unocss";
-import presetUno from "@unocss/preset-uno";
-import transformerDirectives from "@unocss/transformer-directives";
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetTypography,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+  transformerVariantGroup,
+} from "unocss";
 
 export default defineConfig({
-  presets: [presetUno()],
-  transformers: [transformerDirectives()],
+  presets: [presetUno(), presetAttributify(), presetIcons(), presetTypography(), presetWebFonts()],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
 });
