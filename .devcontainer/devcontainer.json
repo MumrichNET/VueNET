@@ -11,7 +11,11 @@
         "ms-playwright.playwright",
         "ms-azuretools.vscode-docker",
         "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "antfu.vite",
+        "formulahendry.auto-complete-tag",
+        "lokalise.i18n-ally",
+        "antfu.iconify"
       ]
     }
   },
