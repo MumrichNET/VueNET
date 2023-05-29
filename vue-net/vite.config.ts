@@ -19,10 +19,10 @@ export default defineConfig({
     vue(),
     vueJsx(),
     UnoCSS(),
-    Components({
-      dts: "src/@types/auto-components.d.ts",
-      dirs: ["src/widgets"],
-    }),
+    // Components({
+    //   dts: "src/@types/auto-components.d.ts",
+    //   dirs: ["src/widgets"],
+    // }),
   ],
   resolve: {
     alias: {
