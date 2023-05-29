@@ -18,7 +18,8 @@
         "lokalise.i18n-ally",
         "ms-azuretools.vscode-docker",
         "ms-playwright.playwright",
-        "redhat.vscode-xml"
+        "redhat.vscode-xml",
+        "voorjaar.windicss-intellisense"
       ]
     }
   },

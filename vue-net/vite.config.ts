@@ -9,7 +9,10 @@ import UnoCSS from 'unocss/vite'
 export default defineConfig({
   server: {
     port: 3000,
-    strictPort: true
+    strictPort: true,
+    watch: {
+      usePolling: true
+    }
   },
   plugins: [vue(), vueJsx(), UnoCSS()],
   resolve: {
