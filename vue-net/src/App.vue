@@ -10,25 +10,33 @@ const justifyRoutesOptions = computed(() => enumToArray(JustifyRoutes));
 </script>
 
 <template>
-  <header>
-    <AutoNav :flowDirection="flowDirection" :justifyRoutes="justifyRoutes">
-      <template #route="{ route }">
-        <RouterLink class="bg-rose-50 hover:bg-rose-400 hover:text-white" :to="route.path">{{ route.name?.toString().toUpperCase() }}</RouterLink>
-      </template>
-    </AutoNav>
-    <hr />
-    <AutoNav :flowDirection="flowDirection" :justifyRoutes="justifyRoutes" />
-  </header>
-  <hr />
-  <section class="flex flex-row justify-evenly">
-    <select v-model="flowDirection">
-      <option v-for="(direction, i) in flowDirections" :key="direction" :value="i">{{ direction }}</option>
-    </select>
-    <select v-model="justifyRoutes">
-      <option v-for="(justify, i) in justifyRoutesOptions" :key="justify" :value="i">{{ justify }}</option>
-    </select>
-  </section>
-  <section>
-    <RouterView />
-  </section>
+  <div class="flex flex-col h-full">
+    <header class="bg-gray-50 shadow p-2">
+      <AutoNav :flowDirection="flowDirection" :justifyRoutes="justifyRoutes" />
+    </header>
+    <section class="flex-grow p-2">
+      <RouterView />
+    </section>
+    <footer class="flex flex-row bg-gray-50 shadow p-2 justify-evenly">
+      <select v-model="flowDirection">
+        <option v-for="(direction, i) in flowDirections" :key="direction" :value="i">{{ direction }}</option>
+      </select>
+      <select v-model="justifyRoutes">
+        <option v-for="(justify, i) in justifyRoutesOptions" :key="justify" :value="i">{{ justify }}</option>
+      </select>
+    </footer>
+  </div>
 </template>
+
+<style>
+html,
+body {
+  @apply h-full m-0 w-full p-0;
+  @apply min-h-xs;
+  @apply min-w-xs;
+}
+
+#app {
+  @apply h-full;
+}
+</style>
