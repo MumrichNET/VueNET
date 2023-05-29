@@ -1,0 +1,9 @@
+{
+  "image": "alpine:3.18.0",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Vue.volar"]
+    }
+  },
+  "forwardPorts": [3000]
+}
