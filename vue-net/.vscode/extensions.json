@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "Tyriar.sort-lines",
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "antfu.iconify",
+    "antfu.unocss",
+    "antfu.vite",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-complete-tag",
+    "lokalise.i18n-ally",
+    "ms-azuretools.vscode-docker",
+    "ms-playwright.playwright"
+  ]
+}
