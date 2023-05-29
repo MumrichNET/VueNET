@@ -5,5 +5,10 @@
       "extensions": ["Vue.volar"]
     }
   },
-  "forwardPorts": [3000]
+  "forwardPorts": [3000],
+  "features": {
+    "./vue-dev-on-alpine": {
+      "version:": "1.0.0"
+    }
+  }
 }
