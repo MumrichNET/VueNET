@@ -2,24 +2,27 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "name": "VueNET",
+  "name": "VueNET - vue-net",
   "customizations": {
     "vscode": {
       "extensions": [
+        "Tyriar.sort-lines",
         "Vue.volar",
         "Vue.vscode-typescript-vue-plugin",
-        "ms-playwright.playwright",
-        "ms-azuretools.vscode-docker",
-        "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint",
+        "antfu.iconify",
+        "antfu.unocss",
         "antfu.vite",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
         "formulahendry.auto-complete-tag",
         "lokalise.i18n-ally",
-        "antfu.iconify"
+        "ms-azuretools.vscode-docker",
+        "ms-playwright.playwright"
       ]
     }
   },
   "forwardPorts": [
     3000
-  ]
+  ],
+  "postAttachCommand": "cd vue-net && npm run dev"
 }
