@@ -1,0 +1,12 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "name": "VueNET",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Vue.volar"]
+    }
+  },
+  "forwardPorts": [3000]
+}
