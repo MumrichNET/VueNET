@@ -5,8 +5,15 @@
   "name": "VueNET",
   "customizations": {
     "vscode": {
-      "extensions": ["Vue.volar", "ms-azuretools.vscode-docker"]
+      "extensions": [
+        "Vue.volar",
+        "ms-azuretools.vscode-docker",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
     }
   },
-  "forwardPorts": [3000]
+  "forwardPorts": [
+    3000
+  ]
 }
