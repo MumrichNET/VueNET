@@ -2,10 +2,6 @@
 import { routes } from '@/router'
 import { markRaw } from 'vue'
 
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
 function addAboutRoute() {
   routes.push({
     path: '/about',
@@ -21,6 +17,4 @@ function addAboutRoute() {
 <template>
   <main>Home</main>
   <button @click="addAboutRoute">Add About Route</button>
-  <pre>{{ routes }}</pre>
-  <pre>{{ router.options.routes }}</pre>
 </template>
