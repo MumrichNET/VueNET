@@ -7,13 +7,14 @@ import { type WidgetProps } from "../contracts/Props";
 import { computed } from "vue";
 
 export type MarkdownWidgetProps = WidgetProps<string> & {};
+export const defaultModelValue = "# My Title\n\nMy awesome **Text**...";
 </script>
 
 <script setup lang="ts">
 import { marked } from "marked";
 
 const props = withDefaults(defineProps<MarkdownWidgetProps>(), {
-  modelValue: "# My Title\n\nMy awesome **Text**...",
+  modelValue: defaultModelValue,
 });
 
 const htmlText = computed(() =>
