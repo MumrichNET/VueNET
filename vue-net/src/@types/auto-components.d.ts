@@ -9,9 +9,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AutoNav: typeof import('./../components/AutoNav.vue')['default']
+    EditButton: typeof import('./../components/EditButton.vue')['default']
     MarkdownWidget: typeof import('./../widgets/MarkdownWidget.vue')['default']
     MarkdownWidgetEditor: typeof import('./../widgets/MarkdownWidgetEditor.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    WidgetWrapper: typeof import('./../components/WidgetWrapper.vue')['default']
   }
 }

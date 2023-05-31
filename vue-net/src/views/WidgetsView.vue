@@ -5,21 +5,31 @@
       <div class="flex flex-col flex-auto bg-red-50 p-2">
         <h3 class="text-center w-full">Templates</h3>
         <Draggable
-          class="dropzone"
-          :list="templates"
-          :group="{ name: 'widgets', pull: 'clone', put: false }"
-          itemKey="widget"
           :clone="onClone"
+          :group="{ name: 'widgets', pull: 'clone', put: false }"
+          :list="templates"
+          class="dragzone"
+          dragClass="drag"
+          ghostClass="ghost"
+          handle=".handle"
+          itemKey="widget"
         >
           <template #item="{ element }">
-            <component class="shadow" :is="element.widget" />
+            <component class="shadow handle" :is="element.widget" />
           </template>
         </Draggable>
       </div>
       <div class="flex flex-col flex-auto bg-green-50 p-2">
         <h3 class="text-center w-full">Configuration</h3>
-        <div id="quill"></div>
-        <Draggable :list="configuration" class="dropzone" group="widgets" itemKey="id">
+        <Draggable
+          :list="configuration"
+          class="dropzone"
+          dragClass="drag"
+          ghostClass="ghost"
+          group="widgets"
+          handle=".handle"
+          itemKey="id"
+        >
           <template #item="{ element }">
             <WidgetWrapper v-model="element.modelValue">
               <template #editor="slot">
@@ -41,10 +51,10 @@
 </template>
 
 <script setup lang="ts">
+import Draggable from "vuedraggable";
 import MarkdownWidget from "../widgets/MarkdownWidget.vue";
 import MarkdownWidgetEditor from "../widgets/MarkdownWidgetEditor.vue";
 import WidgetWrapper from "../components/WidgetWrapper.vue";
-import Draggable from "vuedraggable";
 import { ref, type Component, markRaw } from "vue";
 import { v4 as uuidv4 } from "uuid";
 
@@ -71,16 +81,33 @@ function onClone(t: TemplateItem): ConfigurationItem {
 </script>
 
 <style scoped>
+.handle {
+  @apply cursor-grap;
+}
+
+.dragzone,
 .dropzone {
   @apply flex flex-col;
   @apply border border-dashed border-gray-600;
   @apply h-full p-2;
 }
 
+.dragzone > * {
+  @apply cursor-grab;
+}
+
+.dragzone > *,
 .dropzone > * {
-  @apply cursor-move;
+  @apply shadow;
+  @apply my-2 px-2;
   @apply bg-white;
-  @apply hover:bg-gray-50;
-  @apply rounded my-1 p-2;
+}
+
+.ghost {
+  @apply bg-pink;
+}
+
+.drag {
+  @apply bg-blue;
 }
 </style>

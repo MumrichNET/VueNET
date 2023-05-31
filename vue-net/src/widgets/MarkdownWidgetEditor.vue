@@ -1,7 +1,6 @@
 <template>
-  <div class="flex flex-row w-full justify-evenly">
-    <MarkdownWidget class="flex-grow" :modelValue="markdown" />
-    <textarea class="flex-grow m-0 p-2" v-model="markdown"></textarea>
+  <div class="flex w-full">
+    <textarea class="flex-grow m-0 p-2 min-h-24" v-model="markdown" />
   </div>
 </template>
 
